@@ -1,3 +1,5 @@
+[![Watch the video](https://img.youtube.com/vi/6f9EbDbejfI/maxresdefault.jpg)](https://www.youtube.com/watch?v=6f9EbDbejfI)
+
 # Welcome to Maka
 
 > **Connect your thoughts,**
