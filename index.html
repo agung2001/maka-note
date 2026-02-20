@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maka - Connect your thoughts</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Background pattern -->
+    <div class="bg-pattern"></div>
+
+    <header class="navbar">
+        <div class="logo">
+            <div class="logo-icon">
+                <span></span><span></span><span></span><span class="blue-dot"></span>
+            </div>
+            <strong>MakaNote</strong>
+        </div>
+        <nav class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#solutions">Solutions</a>
+            <a href="#resources">Resources</a>
+            <a href="#pricing">Pricing</a>
+        </nav>
+        <div class="nav-actions">
+            <a href="#signin" class="nav-link-subtle">Sign in</a>
+            <a href="#demo" class="btn btn-outline">Get demo</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero relative">
+            <div class="hero-content">
+                <div class="logo-large">
+                    <div class="logo-icon-large">
+                        <span></span><span></span><span class="blue-dot"></span><span></span>
+                    </div>
+                </div>
+                <h1>Think, link, and grow<br><span class="text-gray">in one place</span></h1>
+                <p>Connect your thoughts, build your world. Efficiently manage your notes with a beautifully fast local-first experience.</p>
+                <a href="#demo" class="btn btn-primary btn-large">Get free demo</a>
+            </div>
+
+            <!-- Floating UI Elements -->
+            <div class="hero-floating">
+                <!-- Top Left: Sticky Note -->
+                <div class="floating-card sticky-note top-left tilt-left">
+                    <div class="pin"></div>
+                    <p>Take notes to keep track of crucial ideas, link them up, and build a second brain.</p>
+                </div>
+                <!-- Check Icon -->
+                <div class="floating-card icon-card top-left-inner float-slow">
+                    <i data-lucide="check-square" class="text-blue"></i>
+                </div>
+                
+                <!-- Top Right: Reminders -->
+                <div class="floating-card top-right float-med">
+                    <div class="card-header">
+                        <strong>My Vaults</strong>
+                    </div>
+                    <div class="card-body vault-list">
+                        <div class="vault-item">
+                            <i data-lucide="folder"></i> Personal Notes
+                        </div>
+                        <div class="vault-item selected">
+                            <i data-lucide="folder-lock"></i> Work Projects
+                        </div>
+                        <div class="vault-item">
+                            <i data-lucide="folder"></i> Creative Writing
+                        </div>
+                    </div>
+                </div>
+                <!-- Clock Icon -->
+                <div class="floating-card icon-card top-right-inner float-fast">
+                    <i data-lucide="clock"></i>
+                </div>
+
+                <!-- Bottom Left: Today Tasks -->
+                <div class="floating-card bottom-left float-med">
+                    <div class="card-header">
+                        <strong>Recent Links</strong>
+                    </div>
+                    <div class="card-body tasks-list">
+                        <div class="task-item">
+                            <span class="badge red">M</span> Marketing Ideas
+                            <div class="progress"><div class="bar red" style="width: 60%"></div></div>
+                        </div>
+                        <div class="task-item mt-2">
+                            <span class="badge green">P</span> Product Roadmap
+                            <div class="progress"><div class="bar green" style="width: 100%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Right: Integrations -->
+                <div class="floating-card bottom-right float-slow">
+                    <div class="card-header">
+                        <strong>Graph Nodes</strong>
+                    </div>
+                    <div class="card-body app-icons">
+                        <div class="app-icon shadow-sm"><i data-lucide="code-2" class="text-blue"></i></div>
+                        <div class="app-icon shadow-sm"><i data-lucide="git-merge" class="text-green"></i></div>
+                        <div class="app-icon shadow-sm"><i data-lucide="layout-dashboard" class="text-red"></i></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Solution Section -->
+        <section class="solutions section-pad" id="solutions">
+            <span class="badge-rounded">Solutions</span>
+            <h2>Solve your workflow's<br>biggest challenges</h2>
+            
+            <div class="solutions-grid">
+                <div class="solution-item">
+                    <i data-lucide="lock" class="icon-orange"></i>
+                    <p>Ensure your notes are securely stored offline locally, giving you total peace of mind.</p>
+                </div>
+                <div class="solution-item">
+                    <i data-lucide="network" class="icon-orange"></i>
+                    <p>Prioritize your thoughts by visually mapping their connections through graph networks.</p>
+                </div>
+                <div class="solution-item">
+                    <i data-lucide="zap" class="icon-orange"></i>
+                    <p>Navigate blazingly fast with command shortcuts and an intuitive address bar.</p>
+                </div>
+            </div>
+
+            <div class="showcase-container main-app-ui relative">
+                <img src="assets/app_ui.png" alt="Maka Desktop App Interface" class="app-mockup shadow-lg">
+                <!-- Floating decorations on the image -->
+                <div class="floating-card small-cube float-left">
+                    <i data-lucide="folder-open"></i>
+                </div>
+                <div class="floating-card small-cube float-right">
+                    <i data-lucide="check"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features section-pad bg-light" id="features">
+            <span class="badge-rounded">Features</span>
+            <h2>Keep everything in one place</h2>
+            <p class="section-desc">Forget complex folders constraint. Welcome your second brain.</p>
+
+            <div class="feature-bento-grid">
+                <!-- Card 1 -->
+                <div class="bento-card col-span-2 shadow-sm">
+                    <div class="bento-content text-center">
+                        <div class="mockup-ui-mini">
+                            <div class="address-bar-mock">
+                                <i data-lucide="search"></i>
+                                <span>Find in [[Project Alpha]]</span>
+                                <div class="cmd-k">⌘ L</div>
+                            </div>
+                            <div class="users-mock mt-4">
+                                <div class="user-row">
+                                    <div class="avatar blue">J</div>
+                                    <span>Journal / Ideation</span>
+                                </div>
+                                <div class="user-row">
+                                    <div class="avatar pink">W</div>
+                                    <span>Work / Meeting Note</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Lightning Fast Search</h3>
+                        <p>Find your notes, headings, or tags in milliseconds right from the address bar.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bento-card col-span-2 shadow-sm">
+                    <div class="bento-content text-center">
+                        <div class="mockup-ui-mini">
+                            <div class="graph-animation">
+                                <span class="node n1"></span>
+                                <span class="node n2"></span>
+                                <span class="node n3"></span>
+                                <span class="node n4"></span>
+                                <svg class="edges"><line x1="20%" y1="20%" x2="50%" y2="50%" stroke="#e2e8f0" stroke-width="2"/><line x1="80%" y1="30%" x2="50%" y2="50%" stroke="#e2e8f0" stroke-width="2"/><line x1="30%" y1="80%" x2="50%" y2="50%" stroke="#e2e8f0" stroke-width="2"/></svg>
+                            </div>
+                        </div>
+                        <h3>Network Graph</h3>
+                        <p>Visualize how your ideas connect to each other. See the big picture and discover patterns.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bento-card col-span-2 shadow-sm">
+                    <div class="bento-content">
+                        <div class="mockup-ui-mini left-align">
+                            <div class="code-editor-mock">
+                                <div class="code-line"><span class="c-purple">const</span> sayHi = () => {</div>
+                                <div class="code-line ind">console.log(<span class="c-green">"Hello Maka"</span>);</div>
+                                <div class="code-line">}</div>
+                            </div>
+                            <div class="admonition-mock">
+                                <i data-lucide="info"></i>
+                                <span>Note: Remember to run tests</span>
+                            </div>
+                        </div>
+                        <h3>Powerful Rich Editor</h3>
+                        <p>Write with syntax highlighting, mermaid diagrams, and smart admonitions.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bento-card col-span-1 shadow-sm">
+                    <div class="bento-content text-center">
+                        <div class="mockup-ui-mini row-flex">
+                            <div class="music-player">
+                                <i data-lucide="play-circle" class="play-icon"></i>
+                                <div class="bars"><i></i><i></i><i></i></div>
+                            </div>
+                        </div>
+                        <h3>Built-in Focus</h3>
+                        <p>Integrated background music player to keep you in the zone.</p>
+                    </div>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="bento-card col-span-1 shadow-sm">
+                    <div class="bento-content text-center">
+                        <div class="mockup-ui-mini row-flex">
+                             <div class="custom-vault-icon">
+                                 <i data-lucide="folders" class="text-blue"></i>
+                             </div>
+                        </div>
+                        <h3>Local Independence</h3>
+                        <p>Your vaults live solely on your local device storage.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="text-center mt-4">and a lot more features...</p>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing section-pad" id="pricing">
+            <span class="badge-rounded">Pricing</span>
+            <h2>Simple pricing plans</h2>
+            
+            <div class="pricing-grid">
+                <!-- Basic -->
+                <div class="pricing-card shadow-sm">
+                    <h3>Basic plan</h3>
+                    <p class="subtitle">Perfect for individuals.</p>
+                    <div class="price"><strong>$0</strong><span>/mo</span></div>
+                    <a href="#" class="btn btn-primary w-100">Get started</a>
+                    <ul class="features-list">
+                        <li><i data-lucide="check"></i> All core features</li>
+                        <li><i data-lucide="check"></i> Unlimited local vaults</li>
+                        <li><i data-lucide="check"></i> Network graph</li>
+                        <li><i data-lucide="check"></i> Unlimited offline storage</li>
+                    </ul>
+                    <a href="#" class="learn-more">Learn more</a>
+                </div>
+
+                <!-- Pro -->
+                <div class="pricing-card pro shadow-lg relative">
+                    <div class="highlight-badge"><i data-lucide="zap"></i></div>
+                    <h3>Pro plan</h3>
+                    <p class="subtitle text-light">Ideal for sync & backup.</p>
+                    <div class="price text-white"><strong>$9</strong><span class="text-light">/mo</span></div>
+                    <span class="best-choice">Best choice</span>
+                    <a href="#" class="btn btn-white w-100 mt-2">Get started</a>
+                    <ul class="features-list text-white">
+                        <li><i data-lucide="check"></i> All basic features</li>
+                        <li><i data-lucide="check"></i> Cloud sync across devices</li>
+                        <li><i data-lucide="check"></i> Priority support</li>
+                        <li><i data-lucide="check"></i> Publish notes online</li>
+                    </ul>
+                    <a href="#" class="learn-more text-light">Learn more</a>
+                </div>
+
+                <!-- Advanced -->
+                <div class="pricing-card shadow-sm">
+                    <h3>Lifetime</h3>
+                    <p class="subtitle">Best for early adopters.</p>
+                    <div class="price"><strong>$49</strong><span>/once</span></div>
+                    <a href="#" class="btn btn-primary w-100">Get started</a>
+                    <ul class="features-list">
+                        <li><i data-lucide="check"></i> All pro features included</li>
+                        <li><i data-lucide="check"></i> Lifetime updates</li>
+                        <li><i data-lucide="check"></i> VIP support</li>
+                        <li><i data-lucide="check"></i> Support the dev</li>
+                    </ul>
+                    <a href="#" class="learn-more">Learn more</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section like the bottom of Chronotask design -->
+        <section class="bottom-cta section-pad">
+            <div class="cta-inner flex-between align-center">
+                <div class="cta-text">
+                    <div class="logo-inline">
+                        <div class="logo-icon small">
+                            <span></span><span></span><span></span><span class="blue-dot"></span>
+                        </div>
+                        <strong>MakaNote</strong>
+                    </div>
+                    <h2>Stay organized and<br>boost your productivity</h2>
+                </div>
+                <div class="cta-links duo-grid">
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">What's New</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Solutions</a></li>
+                        <li><a href="#">Integrations</a></li>
+                        <li><a href="#">Price</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="floating-icons-abstract">
+                <div class="f-icon f1 shadow-sm"><i data-lucide="calendar"></i></div>
+                <div class="f-icon f2 shadow-sm"><i data-lucide="clock"></i></div>
+                <div class="f-icon f3 shadow-sm"><i data-lucide="flag"></i></div>
+                <div class="f-icon f4 shadow-sm"><i data-lucide="message-square-more"></i></div>
+                <div class="f-icon f5 shadow-sm"><i data-lucide="check-square"></i></div>
+                <div class="f-icon f6 shadow-sm"><i data-lucide="folder-open"></i></div>
+                <div class="f-icon f7 shadow-sm"><i data-lucide="lightbulb" class="text-orange"></i></div>
+                <div class="f-icon f8 shadow-sm"><i data-lucide="chevrons-right" class="text-blue"></i></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-bottom flex-between">
+            <p>&copy; 2026 MakaNote. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
