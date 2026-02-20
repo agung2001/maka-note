@@ -1,69 +1,73 @@
-[![Watch the video](https://img.youtube.com/vi/6f9EbDbejfI/maxresdefault.jpg)](https://www.youtube.com/watch?v=6f9EbDbejfI)
+# React + TypeScript + Vite
 
-# Welcome to Maka
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-> **Connect your thoughts,**
-> **build your world.**
+Currently, two official plugins are available:
 
-Maka is a powerful, Markdown-based workspace designed to turn your notes into a structured, visual environment without the clutter of complex menus.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Simple & Powerful
+## React Compiler
 
-Maka combines the simplicity of plain text with the power of a relational database. It’s designed to grow with your ideas.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-- **Markdown-First**: Write in a clean, standard format that you truly own. No proprietary lock-ins.
-- **The Vault System**: Organize your projects into independent "Vaults." Keep your work, personal life, and research completely separate but equally accessible.
-- **Internal Linking**: Build a "second brain" using `[[internal links]]`. Connect ideas instantly and navigate your knowledge like your own personal Wikipedia.
-- **Network Graph**: Visualize the invisible. See how your thoughts intersect with an interactive graph that maps the relationships between your notes.
-- **Built-in Music Support**: Set the mood for your focus sessions. Manage and play your audio library directly within the app.
-- **Mermaid.js Integration**: Turn text into professional diagrams, flowcharts, and Gantt charts effortlessly.
+## Expanding the ESLint configuration
 
-## Technical Clarity
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-Maka is built with developers and power users in mind.
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-### Syntax Highlighting
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
 
-Document your logic with clean, readable code blocks:
-
-```javascript
-function welcomeMaka() {
-  console.log("Connect your thoughts, build your world.");
-}
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
 
-### Mermaid Diagrams
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-Visualize complex workflows or structures directly within your notes:
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
 
-```mermaid
-graph TD;
-    Ideas-->Maka;
-    Maka-->Clarity;
-    Maka-->Action;
-
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 ```
-
-## Rich Media & Wiki Links
-
-Bring your world to life with integrated media support.
-
-- **Wiki-Style Images**: Easily link and display assets using `![[image.jpg]]` syntax.
-- **Video Integration**: Embed YouTube videos simply by pasting the URL.
-- **Admonitions**: Use "Callout" blocks to highlight specific types of information:
-
-> [!info] Pro Tip
-> Use Info blocks to highlight key takeaways or shortcuts.
-
-> [!warning] Take Note
-> Use Warning blocks to flag important details you shouldn't overlook.
-
-more list of admonitions types : `note`, `abstract`, `info`, `todo`, `tip`, `success`, `question`, `warning`, `failure`, `danger`, `bug`, `example`, `quote`
-
-## Author Notes (Agung Sundoro)
-
-![](https://agungsundoro.com/img/cover.jpg)
-
-👋😁 Hi there, I'm Agung Sundoro aka agung2001, an AI enthusiast from Indonesia 🇮🇩
-thank you for using Maka! I hope you enjoy using it as much as I enjoyed building it.
-if you want to contact me, you can visit my website at https://agungsundoro.com
