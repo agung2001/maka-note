@@ -36,17 +36,29 @@ body {
   position: relative;
 }
 
+/* Top Layout Box */
+.layout-box {
+  background-color: var(--card-bg);
+  border-radius: 32px;
+  margin: 1rem;
+  padding-bottom: 2rem;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+}
+
 /* Background Pattern */
-.bg-pattern {
+.bg-pattern-boxed {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-image: radial-gradient(#d1d5db 1px, transparent 1px);
-  background-size: 20px 20px;
-  opacity: 0.3;
+  top: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  border-radius: 24px;
+  z-index: 0;
+  background-image: radial-gradient(#d1d5db 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
+  opacity: 0.5;
   pointer-events: none;
 }
 
@@ -222,6 +234,11 @@ main {
 .hero {
   text-align: center;
   padding: 6rem 0 10rem;
+}
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
 }
 .hero-content {
   max-width: 800px;
@@ -610,4 +627,6 @@ main {
   .floating-icons-abstract { display: none; }
   .bottom-cta { padding: 2rem; }
   h1 { font-size: 3rem; }
+  
+  .bg-pattern-boxed { top: 0.8rem; left: 0.8rem; right: 0.8rem; bottom: 0.8rem; border-radius: 16px; }
 }

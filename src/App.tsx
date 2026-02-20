@@ -7,102 +7,106 @@ import {
 function App() {
   return (
     <>
-      <div className="bg-pattern"></div>
+      <div className="top-layout-box">
+        <div className="bg-pattern-boxed"></div>
 
-      <header className="navbar">
-        <div className="logo">
-          <div className="logo-icon">
-            <span></span><span></span><span></span><span className="blue-dot"></span>
+        <header className="navbar">
+          <div className="logo">
+            <div className="logo-icon">
+              <span></span><span></span><span></span><span className="blue-dot"></span>
+            </div>
+            <strong>MakaNote</strong>
           </div>
-          <strong>MakaNote</strong>
-        </div>
-        <nav className="nav-links">
-          <a href="#features">Features</a>
-          <a href="#solutions">Solutions</a>
-          <a href="#resources">Resources</a>
-          <a href="#pricing">Pricing</a>
-        </nav>
-        <div className="nav-actions">
-          <a href="#signin" className="nav-link-subtle">Sign in</a>
-          <a href="#demo" className="btn btn-outline">Get demo</a>
-        </div>
-      </header>
+          <nav className="nav-links">
+            <a href="#features">Features</a>
+            <a href="#solutions">Solutions</a>
+            <a href="#resources">Resources</a>
+            <a href="#pricing">Pricing</a>
+          </nav>
+          <div className="nav-actions">
+            <a href="#signin" className="nav-link-subtle">Sign in</a>
+            <a href="#demo" className="btn btn-outline">Get demo</a>
+          </div>
+        </header>
 
-      <main>
         {/* Hero Section */}
-        <section className="hero relative">
-          <div className="hero-content">
-            <div className="logo-large">
-              <div className="logo-icon-large">
-                <span></span><span></span><span className="blue-dot"></span><span></span>
-              </div>
-            </div>
-            <h1>Think, link, and grow<br /><span className="text-gray">in one place</span></h1>
-            <p>Connect your thoughts, build your world. Efficiently manage your notes with a beautifully fast local-first experience.</p>
-            <a href="#demo" className="btn btn-primary btn-large">Get free demo</a>
-          </div>
-
-          {/* Floating UI Elements */}
-          <div className="hero-floating">
-            <div className="floating-card sticky-note top-left tilt-left">
-              <div className="pin"></div>
-              <p>Take notes to keep track of crucial ideas, link them up, and build a second brain.</p>
-            </div>
-            
-            <div className="floating-card icon-card top-left-inner float-slow">
-              <CheckSquare className="text-blue" />
-            </div>
-            
-            <div className="floating-card top-right float-med">
-              <div className="card-header">
-                <strong>My Vaults</strong>
-              </div>
-              <div className="card-body vault-list">
-                <div className="vault-item">
-                  <Folder /> Personal Notes
-                </div>
-                <div className="vault-item selected">
-                  <FolderLock /> Work Projects
-                </div>
-                <div className="vault-item">
-                  <Folder /> Creative Writing
+        <section className="hero">
+          <div className="hero-inner relative">
+            <div className="hero-content">
+              <div className="logo-large">
+                <div className="logo-icon-large">
+                  <span></span><span></span><span className="blue-dot"></span><span></span>
                 </div>
               </div>
-            </div>
-            
-            <div className="floating-card icon-card top-right-inner float-fast">
-              <Clock />
+              <h1>Think, link, and grow<br /><span className="text-gray">in one place</span></h1>
+              <p>Connect your thoughts, build your world. Efficiently manage your notes with a beautifully fast local-first experience.</p>
+              <a href="#demo" className="btn btn-primary btn-large">Get free demo</a>
             </div>
 
-            <div className="floating-card bottom-left float-med">
-              <div className="card-header">
-                <strong>Recent Links</strong>
+            {/* Floating UI Elements */}
+            <div className="hero-floating">
+              <div className="floating-card sticky-note top-left tilt-left">
+                <div className="pin"></div>
+                <p>Take notes to keep track of crucial ideas, link them up, and build a second brain.</p>
               </div>
-              <div className="card-body tasks-list">
-                <div className="task-item">
-                  <span className="badge red">M</span> Marketing Ideas
-                  <div className="progress"><div className="bar red" style={{ width: '60%' }}></div></div>
+              
+              <div className="floating-card icon-card top-left-inner float-slow">
+                <CheckSquare className="text-blue" />
+              </div>
+              
+              <div className="floating-card top-right float-med">
+                <div className="card-header">
+                  <strong>My Vaults</strong>
                 </div>
-                <div className="task-item mt-2">
-                  <span className="badge green">P</span> Product Roadmap
-                  <div className="progress"><div className="bar green" style={{ width: '100%' }}></div></div>
+                <div className="card-body vault-list">
+                  <div className="vault-item">
+                    <Folder /> Personal Notes
+                  </div>
+                  <div className="vault-item selected">
+                    <FolderLock /> Work Projects
+                  </div>
+                  <div className="vault-item">
+                    <Folder /> Creative Writing
+                  </div>
                 </div>
               </div>
-            </div>
+              
+              <div className="floating-card icon-card top-right-inner float-fast">
+                <Clock />
+              </div>
 
-            <div className="floating-card bottom-right float-slow">
-              <div className="card-header">
-                <strong>Graph Nodes</strong>
+              <div className="floating-card bottom-left float-med">
+                <div className="card-header">
+                  <strong>Recent Links</strong>
+                </div>
+                <div className="card-body tasks-list">
+                  <div className="task-item">
+                    <span className="badge red">M</span> Marketing Ideas
+                    <div className="progress"><div className="bar red" style={{ width: '60%' }}></div></div>
+                  </div>
+                  <div className="task-item mt-2">
+                    <span className="badge green">P</span> Product Roadmap
+                    <div className="progress"><div className="bar green" style={{ width: '100%' }}></div></div>
+                  </div>
+                </div>
               </div>
-              <div className="card-body app-icons">
-                <div className="app-icon shadow-sm"><Code2 className="text-blue" /></div>
-                <div className="app-icon shadow-sm"><GitMerge className="text-green" /></div>
-                <div className="app-icon shadow-sm"><LayoutDashboard className="text-red" /></div>
+
+              <div className="floating-card bottom-right float-slow">
+                <div className="card-header">
+                  <strong>Graph Nodes</strong>
+                </div>
+                <div className="card-body app-icons">
+                  <div className="app-icon shadow-sm"><Code2 className="text-blue" /></div>
+                  <div className="app-icon shadow-sm"><GitMerge className="text-green" /></div>
+                  <div className="app-icon shadow-sm"><LayoutDashboard className="text-red" /></div>
+                </div>
               </div>
             </div>
           </div>
         </section>
+      </div>
 
+      <main>
         {/* Solution Section */}
         <section className="solutions section-pad" id="solutions">
           <span className="badge-rounded">Solutions</span>
