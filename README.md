@@ -1,73 +1,107 @@
-# React + TypeScript + Vite
+[![Watch the video](https://img.youtube.com/vi/6f9EbDbejfI/maxresdefault.jpg)](https://www.youtube.com/watch?v=6f9EbDbejfI)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Welcome to Maka
 
-Currently, two official plugins are available:
+> **Connect your thoughts,**
+> **build your world.**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Maka is a powerful, Markdown-based workspace designed to turn your notes into a structured, visual environment without the clutter of complex menus. Everything is stored locally, keeping you in full control of your data.
 
-## React Compiler
+## Simple & Powerful
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Maka combines the simplicity of plain text with the power of a relational database. It’s designed to grow with your ideas.
 
-## Expanding the ESLint configuration
+- **Markdown-First**: Write in a clean, standard format that you truly own. No proprietary lock-ins.
+- **The Vault System**: Organize your projects into independent "Vaults." Keep your work, personal life, and research completely separate but equally accessible.
+- **Internal Linking**: Build a "second brain" using `[[internal links]]`. Connect ideas instantly and navigate your knowledge like your own personal Wikipedia.
+- **Fast Search (Address Bar)**: Press `Cmd + L` (or `Ctrl + L`) to search through titles and content across your Vault instantly. Navigate without touching your mouse!
+- **Network Graph**: Visualize the invisible. See how your thoughts intersect with an interactive graph that maps the relationships between your notes.
+- **Built-in Music Support**: Set the mood for your focus sessions. Manage and play your audio library directly within the app without switching to external apps.
+- **Mermaid.js Integration**: Turn text into professional diagrams, flowcharts, pie charts, and Gantt charts effortlessly.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Technical Clarity
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Maka is built with developers and power users in mind.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Syntax Highlighting
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Document your logic with clean, readable code blocks:
+
+```javascript
+function welcomeMaka() {
+  console.log("Connect your thoughts, build your world.");
+}
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Mermaid Diagrams
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Visualize complex workflows or structures directly within your notes. Maka supports Flowcharts, Quadrant Charts, XY Charts, Pie Charts, and more:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```mermaid
+graph TD;
+    Ideas-->Maka;
+    Maka-->Clarity;
+    Maka-->Action;
+
 ```
+
+## Rich Media & Wiki Links
+
+Bring your world to life with integrated media support.
+
+- **Wiki-Style Images**: Easily link and display assets using `![[image.jpg]]` syntax. You can even paste images directly from the web!
+- **Video Integration**: Embed YouTube videos simply by pasting the URL. Watch while taking notes without switching tabs.
+- **Admonitions**: Use "Callout" blocks to highlight specific types of information:
+
+> [!info] Pro Tip
+> Use Info blocks to highlight key takeaways or shortcuts.
+
+> [!warning] Take Note
+> Use Warning blocks to flag important details you shouldn't overlook.
+
+more list of admonitions types : `note`, `abstract`, `info`, `todo`, `tip`, `success`, `question`, `warning`, `failure`, `danger`, `bug`, `example`, `quote`
+
+## Keyboard Shortcuts ⚡
+
+Work at lightning speed without taking your hands off the keyboard. *(Note: On Windows, use `Alt` instead of `Option` and `Ctrl` instead of `Cmd`)*.
+
+### 1. Navigation & View Mode
+| Shortcut | Function |
+| --- | --- |
+| `Space` | Fast forward to next slide/page |
+| `←` / `→` | Previous/Next presentation slide |
+| `Option + F` | Toggle View Mode (Editor, Source, or Presentation) |
+
+### 2. Panel Management
+| Shortcut | Function |
+| --- | --- |
+| `Option + V` | Toggle Vault Panel |
+| `Option + T` | Toggle Table of Contents (TOC) |
+| `Option + L` | Toggle Links Panel |
+| `Option + G` | Open Network Graph 🕸️ |
+| `Escape` | Close all active overlay panels |
+
+### 3. Editor & Tabs
+| Shortcut | Function |
+| --- | --- |
+| `Cmd + T` | Open New Tab |
+| `Cmd + W` | Close current Tab |
+| `Cmd + L` | Focus Address Bar (Search) 🔍 |
+| `Cmd + O` | Open another Vault |
+| `Option + O` | Select active Vault |
+
+### 4. Vibe & Expression
+| Shortcut | Function |
+| --- | --- |
+| `Option + B` | Cycle Background Music (Default ➡️ Chill ➡️ Thinking) 🎵 |
+| `Option + M` | Mute / Unmute Music |
+| `Option + 1` | 🤯 Mindblown Confetti Effect! |
+| `Option + 2` | 🎉 Party Confetti Effect! |
+
+## Author Notes (Agung Sundoro)
+
+![](https://agungsundoro.com/img/cover.jpg)
+
+👋😁 Hi there, I'm Agung Sundoro aka agung2001, an AI enthusiast from Indonesia 🇮🇩
+thank you for using Maka! I hope you enjoy using it as much as I enjoyed building it.
+if you want to contact me, you can visit my website at https://agungsundoro.com
